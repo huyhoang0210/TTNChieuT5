@@ -4,21 +4,49 @@
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
-    int count = 1;
+    int index = 1;
 }
 
 <div class="container">
     <div class="row">
-        <div class="btn-group" role="group" aria-label="Basic example">
-            @Ajax.ActionLink("Đồ ăn", "PetFoodPartialView",new AjaxOptions { HttpMethod = "GET",InsertionMode = InsertionMode.Replace,UpdateTargetId = "LoadData" })
-            
-        </div>
-    </div>
-    <div class="row">
         <div id="LoadData">
-            
+            <div class="col-md-3">
+                <a href="/ManageProducts/Insert/" class="btn btn-primary">Thêm mới</a>
+            </div>
+            <div class=" col-md-12 ">
+                <table class=" col-md-12 table table-dark">
+                    <thead>
+                        <tr>
+                            <td>STT</td>
+                            <td>Tên sản phẩm</td>
+                            <td>Số lượng</td>
+                            <td>Đơn giá</td>
+                            <td>Hình ảnh</td>
+                            <td>#</td>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+
+
+                        @foreach (var item in Model)
+                        {   
+                            <tr>
+                                <td>@index</td>
+                                <td>@item.TenSanPham</td>
+                                <td>@item.SoLuong</td>
+                                <td>@item.Gia</td>
+                                <td><img src="@Url.Content("/Images/"+item.HinhAnh)" alt="Alternate Text " width="150px" /></td>
+                                <td><a href="/ManageProducts/Update/@item.IDSanPham" class="btn btn-primary">Cập nhật</a></td>
+                            </tr>
+                            index++;
+                        }
+                    </tbody>
+                </table>
+            </div>
         </div>
-    </div>
-    
+    </div>  
 </div>
+
+@Html.PagedListPager(Model,Page=>Url.Action("Index",new { Page = Page}))
 

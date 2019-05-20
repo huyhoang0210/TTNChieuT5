@@ -389,7 +389,7 @@
     <Content Include="Views\Shared\_PartialView.cshtml" />
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
     <Content Include="Views\ManageProducts\Index.cshtml" />
-    <Content Include="Views\ManageProducts\PetFoodPartialView.cshtml" />
+    <Content Include="Views\ManageProducts\Insert.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
