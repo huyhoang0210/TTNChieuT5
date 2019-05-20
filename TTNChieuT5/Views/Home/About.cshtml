@@ -1,7 +1,41 @@
-﻿@{
+﻿
+@{
     ViewBag.Title = "About";
+    Layout = "~/Views/Shared/_ShopLayout.cshtml";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
-<p>Use this area to provide additional information.</p>
+<div class="banner_inner">
+    <div class="services-breadcrumb">
+        <div class="inner_breadcrumb">
+
+            <ul class="short">
+                <li>
+                    <a href="index.html">Trang chủ</a>
+                    <i>|</i>
+                </li>
+                <li>Giới thiệu</li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+<div class="inner-sec-shop px-lg-4 px-3">
+    <div class="about-content py-lg-5 py-3">
+        <div class="row">
+            <div class="col-lg-6 p-0">
+                <img src="~/Assets/User/images/banner1.jpg" alt="Goggles" class="img-fluid">
+            </div>
+            <div class="col-lg-6 about-info">
+                <h3 class="tittle-w3layouts text-left mb-lg-5 mb-3">Giới thiệu</h3>
+                <p class="my-xl-4 my-lg-3 my-md-4 my-3">
+                    Mật pet family là cửa hàng tại Hà Nội cung cấp đồ dùng, quần áo, thức ăn, sửa tắm, chuồng, vòng cổ xích và các phụ kiện chó mèo hàng đầu tại Việt Nam. Là địa chỉ tin cậy, chuyên nghiệp với chất lượng dịch vụ tốt nhất luôn được khách hàng tin tưởng và là địa điểm đến tuyệt vời dành cho thú cưng
+                </p>
+
+                @*<a href="@Url.Action("SanPham","SanPham")" class="btn btn-sm animated-button gibson-three mt-4">Shop Now</a>*@
+
+            </div>
+        </div>
+    </div>
+</div>
+@Html.Partial("_PartialView")
+
