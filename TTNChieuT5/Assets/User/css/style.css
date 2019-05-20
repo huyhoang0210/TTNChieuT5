@@ -2392,4 +2392,7 @@ input[type="number"] {
     }
 }
 
+.col-lg-4 address-gri{
+    background: #f7f7f7;
+}
 /*-- //responsive media queries --*/
