@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "DangNhap";
+    Layout = "~/Views/Shared/_ShopLayout.cshtml";
+}
+
+
+<title>Login | E-Shopper</title>
+<link href="~/Assets/User/css/bootstrap.min.css" rel="stylesheet">
+<link href="~/Assets/User/css/font-awesome.min.css" rel="stylesheet">
+<link href="~/Assets/User/css/main.css" rel="stylesheet">
+<link href="~/Assets/User/css/responsive.css" rel="stylesheet">
+<link rel="shortcut icon" href="~/Assets/User/images//ico/favicon.ico">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="~/Assets/User/images//ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="~/Assets/User/images//ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="~/Assets/User/images//ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="~/Assets/User/images//ico/apple-touch-icon-57-precomposed.png">
+<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 col-sm-offset-1">
+                <div class="login-form">
+                    <!--login form-->
+                    <h2>Đăng nhập tài khoản của bạn</h2>
+                    <form action="#" method="post" id="formDangNhap">
+                        <input type="text" name="TaiKhoan" placeholder="Tài khoản" required>
+                        <input type="password" name="MatKhau" placeholder="Mật khẩu" required>
+                        <span>
+                            <input type="checkbox" class="checkbox">
+                            Nhớ tài khoản
+                        </span>
+                        <button type="submit" class="btn btn-default">Đăng nhập</button>
+                        <button class="btn btn-default"> <a href="@Url.Action("DangKy","DangNhap")">  Đăng ký </a> </button>
+
+                        @*<a class="btn btn-default" href="@Url.Action("DangKi","DangNhap")"> Đăng Kí </a>*@
+                    </form>
+                    <br />
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/price-range.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/main.js"></script>
+
+</body>

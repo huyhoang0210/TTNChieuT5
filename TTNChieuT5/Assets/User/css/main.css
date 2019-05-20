@@ -2520,4 +2520,13 @@ h2.title {
   color: #FE980F;
 }
 
+button.btn.btn-default {
+    width: 110px;
+}
+
+a {
+    color: #fff;
+    font-size: 16px;
+}
+
 
