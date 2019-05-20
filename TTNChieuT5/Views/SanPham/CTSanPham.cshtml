@@ -1,0 +1,158 @@
+﻿@using TTNChieuT5.Models;
+@model SanPham
+@{
+    ViewBag.Title = "CTSanPham";
+    Layout = "~/Views/Shared/_ShopLayout.cshtml";
+}
+
+<div class="banner_inner">
+    <div class="services-breadcrumb">
+        <div class="inner_breadcrumb">
+
+            <ul class="short">
+                <li>
+                    <a href="index.html">Trang chủ</a>
+                    <i>|</i>
+                </li>
+                <li>Chi tiết sản phẩm</li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+<div class="container">
+    <div class="inner-sec-shop pt-lg-4 pt-3">
+        <div class="row">
+            <div class="col-lg-4 single-right-left ">
+                <div class="grid images_3_of_2">
+                    <div class="flexslider1">
+
+
+                        <div class="clearfix"></div>
+                        <div class="flex-viewport" style="overflow: hidden; position: relative;">
+                            <ul class="slides" style="width: 1000%; transition-duration: 0.6s; transform: translate3d(-700px, 0px, 0px);">
+                                <li data-thumb="images/d3.jpg" class="clone" style="width: 350px; float: left; display: block;">
+                                    <div class="thumb-image"> <img src="images/d3.jpg" data-imagezoom="true" class="img-fluid" alt=" "> </div>
+                                </li>
+                                <li data-thumb="images/d2.jpg" class="" style="width: 350px; float: left; display: block;">
+                                    <div class="thumb-image"> <img src="images/d2.jpg" data-imagezoom="true" class="img-fluid" alt=" "> </div>
+                                </li>
+                                <li data-thumb="images/d1.jpg" class="flex-active-slide" style="width: 350px; float: left; display: block;">
+                                    <div class="thumb-image"> <img src="@Url.Content("~/images/"+ Model.HinhAnh)" )" data-imagezoom="true" class="img-fluid" alt=" "> </div>
+                                </li>
+                                <li data-thumb="images/d3.jpg" class="" style="width: 350px; float: left; display: block;">
+                                    <div class="thumb-image"> <img src="images/d3.jpg" data-imagezoom="true" class="img-fluid" alt=" "> </div>
+                                </li>
+                                <li data-thumb="images/d2.jpg" class="clone" style="width: 350px; float: left; display: block;">
+                                    <div class="thumb-image"> <img src="images/d2.jpg" data-imagezoom="true" class="img-fluid" alt=" "> </div>
+                                </li>
+                            </ul>
+                        </div>
+                      
+                        @*<ul class="flex-direction-nav">*@
+                         
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8 single-right-left simpleCart_shelfItem">
+                <h3>@Model.TenSanPham </h3>
+                <p>
+                    <span class="item_price">@Model.Gia</span>
+                    @*<del>$1,199</del>*@
+                </p>
+                <div class="rating1">
+                    <ul class="stars">
+                        <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+                <div class="color-quality">
+                    <div class="color-quality-right">
+                        <h5>Số lượng :</h5>
+                        <input type="number" name="" min="0" max="" style="width: 50px">
+
+                    </div>
+                </div>
+
+                <div class="occasion-cart">
+                    <div class="googles single-item singlepage">
+                        <form action="#" method="post">
+                            <input type="hidden" name="cmd" value="_cart">
+                            <input type="hidden" name="add" value="1">
+                            <input type="hidden" name="googles_item" value="Farenheit">
+                            <input type="hidden" name="amount" value="575.00">
+                            <button type="submit" class="googles-cart pgoogles-cart">
+                                Thêm vào giỏ hàng
+                            </button>
+
+                        </form>
+
+                    </div>
+                </div>
+                <ul class="footer-social text-left mt-lg-4 mt-3">
+                    <li>Share On : </li>
+                    <li class="mx-2">
+                        <a href="#">
+                            <span class="fab fa-facebook-f"></span>
+                        </a>
+                    </li>
+                    <li class="mx-2">
+                        <a href="#">
+                            <span class="fab fa-twitter"></span>
+                        </a>
+                    </li>
+                    <li class="mx-2">
+                        <a href="#">
+                            <span class="fab fa-google-plus-g"></span>
+                        </a>
+                    </li>
+                    <li class="mx-2">
+                        <a href="#">
+                            <span class="fab fa-linkedin-in"></span>
+                        </a>
+                    </li>
+                    <li class="mx-2">
+                        <a href="#">
+                            <span class="fas fa-rss"></span>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+            <div class="clearfix"> </div>
+            <!--/tabs-->
+            <div class="responsive_tabs">
+                <div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
+                    @*<ul class="resp-tabs-list">
+                            <li class="resp-tab-item resp-tab-active" aria-controls="tab_item-0" role="tab">Mô tá</li>
+                        </ul>*@
+                    <div class="resp-tabs-container">
+                        <!--/tab_one-->
+                        <h2 class="resp-accordion resp-tab-active" role="tab" aria-controls="tab_item-0"><span class="resp-arrow"></span>Mô tá</h2><div class="tab1 resp-tab-content resp-tab-content-active" style="display:block" aria-labelledby="tab_item-0">
+
+                            <div class="single_page">
+                                <h6> Bạn Có Biết !!!</h6>
+                                <p>
+                                    @Model.MoTa
+                                </p>
+                                @*<p class="para">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elPellentesque vehicula augue eget nisl ullamcorper, molestie
+                                        blandit ipsum auctor. Mauris volutpat augue dolor.Consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                                        ut lab ore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. labore et dolore
+                                        magna aliqua.
+                                    </p>*@
+                            </div>
+                        </div>
+                        <!--//tab_one-->
+                    </div>
+                </div>
+            </div>
+            <!--//tabs-->
+
+        </div>
+    </div>
+</div>

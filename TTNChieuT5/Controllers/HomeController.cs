@@ -3,15 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
-namespace TTNChieuT5.Controllers
+using TTNChieuT5.Models;
+namespace ThucTapNhom.Controllers
 {
     public class HomeController : Controller
     {
+        OnlShopDbContext db = new OnlShopDbContext();
         public ActionResult Index()
         {
-            return View();
+            var lstSanPham = db.SanPhams.Take(12).ToList();
+            return View(lstSanPham);
         }
+
 
         public ActionResult About()
         {
@@ -24,6 +27,11 @@ namespace TTNChieuT5.Controllers
         {
             ViewBag.Message = "Your contact page.";
 
+            return View();
+        }
+
+        public ActionResult TestAdmin()
+        {
             return View();
         }
     }

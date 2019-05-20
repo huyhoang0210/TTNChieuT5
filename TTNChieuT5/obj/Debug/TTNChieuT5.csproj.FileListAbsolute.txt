@@ -89,3 +89,7 @@ C:\Users\Admin\Desktop\TTNChieuT5\TTNChieuT5\obj\Debug\TTNChieuT5.csproj.CoreCom
 C:\Users\Admin\Desktop\TTNChieuT5\TTNChieuT5\obj\Debug\TTNChieuT5.csproj.CopyComplete
 C:\Users\Admin\Desktop\TTNChieuT5\TTNChieuT5\obj\Debug\TTNChieuT5.dll
 C:\Users\Admin\Desktop\TTNChieuT5\TTNChieuT5\obj\Debug\TTNChieuT5.pdb
+C:\Users\Admin\Desktop\TTNChieuT5\TTNChieuT5\bin\EntityFramework.dll
+C:\Users\Admin\Desktop\TTNChieuT5\TTNChieuT5\bin\EntityFramework.SqlServer.dll
+C:\Users\Admin\Desktop\TTNChieuT5\TTNChieuT5\bin\EntityFramework.xml
+C:\Users\Admin\Desktop\TTNChieuT5\TTNChieuT5\bin\EntityFramework.SqlServer.xml
