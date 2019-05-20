@@ -3144,3 +3144,16 @@ div#graph1, div#graph4, div#graph5, div#graph6, div#graph7, div#graph8, div#grap
     padding: 0;
 }
 }
+
+h3 {
+    color: #fff;
+}
+.btn-group {
+    width: 500px;
+    margin: 10px 0px 10px 275px;
+}
+.btn-secondary {
+    width: 150px;
+    background-color: #dca6e0;
+    color: #fff;
+}

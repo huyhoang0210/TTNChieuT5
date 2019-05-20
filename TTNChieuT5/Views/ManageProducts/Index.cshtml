@@ -1,0 +1,24 @@
+﻿@using PagedList;
+@using PagedList.Mvc
+@model PagedList.PagedList<TTNChieuT5.Models.SanPham>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count = 1;
+}
+
+<div class="container">
+    <div class="row">
+        <div class="btn-group" role="group" aria-label="Basic example">
+            @Ajax.ActionLink("Đồ ăn", "PetFoodPartialView",new AjaxOptions { HttpMethod = "GET",InsertionMode = InsertionMode.Replace,UpdateTargetId = "LoadData" })
+            
+        </div>
+    </div>
+    <div class="row">
+        <div id="LoadData">
+            
+        </div>
+    </div>
+    
+</div>
+
