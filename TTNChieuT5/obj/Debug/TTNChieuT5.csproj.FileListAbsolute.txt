@@ -84,7 +84,6 @@ C:\Users\Admin\Desktop\TTNChieuT5\TTNChieuT5\bin\Microsoft.AI.DependencyCollecto
 C:\Users\Admin\Desktop\TTNChieuT5\TTNChieuT5\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\Admin\Desktop\TTNChieuT5\TTNChieuT5\bin\Microsoft.AI.Web.xml
 C:\Users\Admin\Desktop\TTNChieuT5\TTNChieuT5\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Admin\Desktop\TTNChieuT5\TTNChieuT5\obj\Debug\TTNChieuT5.csprojAssemblyReference.cache
 C:\Users\Admin\Desktop\TTNChieuT5\TTNChieuT5\obj\Debug\TTNChieuT5.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Desktop\TTNChieuT5\TTNChieuT5\obj\Debug\TTNChieuT5.csproj.CopyComplete
 C:\Users\Admin\Desktop\TTNChieuT5\TTNChieuT5\obj\Debug\TTNChieuT5.dll
