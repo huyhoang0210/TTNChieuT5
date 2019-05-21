@@ -19,6 +19,7 @@ namespace TTNChieuT5.Models
         public int IDHoaDon { get; set; }
 
         [Column(TypeName = "date")]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy hh: mm}",ApplyFormatInEditMode =true)]
         public DateTime? NgayTao { get; set; }
 
         public long? TongTien { get; set; }

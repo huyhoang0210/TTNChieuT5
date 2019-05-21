@@ -16,23 +16,31 @@ namespace TTNChieuT5.Controllers
 
 
         // GET: ManageProducts
-        public ActionResult Index(int ? page)
+        public ActionResult Index(int? page)
         {
             int pageNumber = page ?? 1;
             int pageSize = 10;
-            var lst = db.SanPhams.ToList().OrderBy(n=>n.TenSanPham).ToPagedList(pageNumber,pageSize);
+            var lst = db.SanPhams.Where(n=>n.SoLuong > 0).ToList().OrderBy(n => n.TenSanPham).ToPagedList(pageNumber, pageSize);
+            return View(lst);
+        }
+
+        public ActionResult OutOfStockProduct(int ? page)
+        {
+            int pageNumber = page ?? 1;
+            int pageSize = 10;
+            var lst = db.SanPhams.Where(n=>n.SoLuong == 0).ToList().OrderBy(n => n.TenSanPham).ToPagedList(pageNumber, pageSize);
             return View(lst);
         }
         public ActionResult Insert()
         {
-            ViewBag.IDDanhMuc=db.DanhMucSanPhams.ToList();
+            //ViewBag.IDDanhMuc = db.DanhMucSanPhams.ToList();
             return View();
         }
         [HttpPost]
-        public ActionResult Insert(SanPham sp,HttpPostedFileBase fileUpLoad)
+        public ActionResult Insert(SanPham sp, HttpPostedFileBase fileUpLoad)
         {
-            
-            if (fileUpLoad.ContentLength == 0)
+
+            if (fileUpLoad  == null)
             {
                 ViewBag.ThongBao = "Bạn chưa chọn ảnh";
                 return View();
@@ -51,11 +59,44 @@ namespace TTNChieuT5.Controllers
                 return RedirectToAction("Index");
             }
             return View();
-           
+
         }
         public ActionResult Update(int id)
         {
+            var product = db.SanPhams.Find(id);
+            if (product == null)
+            {
+                return View("_404");
+            }
+            return View(product);
+        }
+        [HttpPost]
+        public ActionResult Update(SanPham sp, HttpPostedFileBase fileUpLoad)
+        {
+            var product = db.SanPhams.Find(sp.IDSanPham);
+            if (product == null)
+            {
+                return RedirectToAction("_404");
+            }
+            if (fileUpLoad != null)
+            {
+                string _fileName = Path.GetFileName(fileUpLoad.FileName);
+                string _path = Path.Combine(Server.MapPath("/Images"), _fileName);
+                fileUpLoad.SaveAs(_path);
 
+                product.HinhAnh = fileUpLoad.FileName;
+            }
+            product.SoLuong = sp.SoLuong;
+            product.Gia = sp.Gia;
+            product.MoTa = sp.MoTa;
+
+            db.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult _404()
+        {
             return View();
         }
     }

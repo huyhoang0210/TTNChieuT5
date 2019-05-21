@@ -1,9 +1,10 @@
-﻿<!--A Design by W3layouts
-Author: W3layout
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
+﻿@{
+    if (Session["AdminName"] == null)
+    {
+        Response.Redirect("~/LoginAdmin/Login");
+
+    }
+}
 <!DOCTYPE html>
 <head>
     <title>Mật pet family</title>
@@ -95,7 +96,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <ul class="dropdown-menu extended logout">
                             <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
                             <li><a href="#"><i class="fa fa-cog"></i> Cài đặt</a></li>
-                            <li><a href="#"><i class="fa fa-key"></i> Đăng xuất</a></li>
+                            <li><a href="/LoginAdmin/Logout/"><i class="fa fa-key"></i> Đăng xuất</a></li>
                         </ul>
                     </li>
                     <!-- user login dropdown end -->
@@ -112,7 +113,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="leftside-navigation">
                     <ul class="sidebar-menu" id="nav-accordion">
                         <li>
-                            <a class="active" href="index.html">
+                            <a class="active" href="/AdminPage/Index/">
                                 <i class="fa fa-dashboard"></i>
                                 <span>Trang chủ</span>
                             </a>
@@ -124,31 +125,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <span>Sản phẩm</span>
                             </a>
                             <ul class="sub">
-                                <li><a href="#">Đang bán</a></li>
-                                <li><a href="#">Hết hàng</a></li>
+                                <li><a href="/ManageProducts/Index">Đang bán</a></li>
+                                <li><a href="/ManageProducts/OutOfStockProduct/">Hết hàng</a></li>
 
                             </ul>
                         </li>
                         <li class="sub-menu">
-                            <a href="javascript:;">
+                            <a href="/ManageOrder/Index/">
                                 <i class="fa fa-book"></i>
                                 <span>Đơn hàng</span>
                             </a>
-                            <ul class="sub">
-                                <li><a href="#">Đã giao</a></li>
-                                <li><a href="#">Chưa giao</a></li>
-
-                            </ul>
-                        </li>
-
-                        <li class="sub-menu">
-                            <a href="#">
-                                <i class="fa fa-envelope"></i>
-                                <span>Email </span>
-                            </a>
 
                         </li>
-
                     </ul>
                 </div>
                 <!-- sidebar menu end-->
@@ -254,12 +242,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 disablePast: true
             });
 
-            switch (window.location.protocol) {
-                case 'http:':
-                case 'https:':
-                    alert('Xin chào Nam Nguyễn');
-                    break;
-            }
+
 
         });
     </script>

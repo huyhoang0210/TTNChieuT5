@@ -187,3 +187,4 @@ C:\Users\admin\Desktop\ThucTapNhom\TTNChieuT5\TTNChieuT5\obj\Debug\TTNChieuT5.cs
 C:\Users\admin\Desktop\ThucTapNhom\TTNChieuT5\TTNChieuT5\obj\Debug\TTNChieuT5.csproj.CopyComplete
 C:\Users\admin\Desktop\ThucTapNhom\TTNChieuT5\TTNChieuT5\obj\Debug\TTNChieuT5.dll
 C:\Users\admin\Desktop\ThucTapNhom\TTNChieuT5\TTNChieuT5\obj\Debug\TTNChieuT5.pdb
+C:\Users\admin\Desktop\ThucTapNhom\TTNChieuT5\TTNChieuT5\obj\Debug\TTNChieuT5.csprojAssemblyReference.cache

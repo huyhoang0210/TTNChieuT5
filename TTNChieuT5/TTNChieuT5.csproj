@@ -161,12 +161,16 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\AdminPageController.cs" />
+    <Compile Include="Controllers\CartController.cs" />
+    <Compile Include="Controllers\LoginAdminController.cs" />
+    <Compile Include="Controllers\ManageOrderController.cs" />
     <Compile Include="Controllers\ManageProductsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\admin.cs" />
+    <Compile Include="Models\CartItem.cs" />
     <Compile Include="Models\ChiTietHoaDon.cs" />
     <Compile Include="Models\DanhMucSanPham.cs" />
     <Compile Include="Models\HoaDon.cs" />
@@ -382,14 +386,19 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_ShopLayout.cshtml" />
     <Content Include="Views\Shared\_PartialView.cshtml" />
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
     <Content Include="Views\ManageProducts\Index.cshtml" />
     <Content Include="Views\ManageProducts\Insert.cshtml" />
+    <Content Include="Views\ManageProducts\_404.cshtml" />
+    <Content Include="Views\ManageProducts\OutOfStockProduct.cshtml" />
+    <Content Include="Views\ManageOrder\Index.cshtml" />
+    <Content Include="Views\AdminPage\Index.cshtml" />
+    <Content Include="Views\ManageOrder\Detail.cshtml" />
+    <Content Include="Views\ManageProducts\Update.cshtml" />
+    <Content Include="Views\LoginAdmin\Login.cshtml" />
+    <Content Include="Views\Cart\ViewCart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
