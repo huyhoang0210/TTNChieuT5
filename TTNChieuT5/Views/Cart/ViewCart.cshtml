@@ -50,49 +50,51 @@
                     Giỏ hàng của bạn:
                     <span>@Model.Count().ToString() sản phẩm</span>
                 </h4>
-                <table class="timetable_sub">
+                <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th>STT</th>
-                            <th>Ảnh</th>
-                            <th>Tên sản phẩm</th>
-                            <th>Số lượng</th>
-                            <th>Giá</th>
-                            <th>Thành tiền</th>
-                            <th>Xóa</th>
+                            <th scope="col">STT</th>
+                            <th scope="col">Ảnh</th>
+                            <th scope="col">Tên sản phẩm</th>
+                            <th scope="col">Số lượng</th>
+                            <th scope="col">Giá</th>
+                            <th scope="col">Thành tiền</th>
+                            <th scope="col">Cập nhật</th>
+                            <th scope="col">Xóa</th>
                         </tr>
                     </thead>
                     <tbody>
                         @{
                             foreach (var item in Model)
                             {
-                                <tr class="rem1">
-                                    <td class="invert">@index</td>
+                                <tr>
+                                    <th scope="row">@index</th>
                                     <td class="invert-image">
                                         <a href="#">
-                                            <img src="@Url.Content("/Images/"+item.HinhAnh)" alt=" " class="img-responsive">
+                                            <img src="@Url.Content("/Images/"+item.HinhAnh)" alt=" " class="img-responsive" style="width:100px;">
                                         </a>
                                     </td>
+                                    <td class="invert">@item.TenSanPham</td>
                                     <td class="invert">
                                         <div class="quantity">
                                             <div class="quantity-select">
                                                 <div class="entry value-minus">&nbsp;</div>
                                                 <div class="entry value">
-                                                    <span>@item.SoLuong</span>
+                                                    <input type="number" min="1" max="" value="@item.SoLuong" name="_SoLuong" style="width:50px;"/>
                                                 </div>
                                                 <div class="entry value-plus active">&nbsp;</div>
                                             </div>
                                         </div>
                                     </td>
-                                    <td class="invert">@item.TenSanPham</td>
+                                    
 
-                                    <td class="invert">@item.DonGia vnđ</td>
+                                    <td class="invert price">@item.DonGia vnđ</td>
                                     <td class="invert">@item.ThanhTien vnđ</td>
                                     <td class="invert">
-                                        <div class="rem">
-                                            <div class="close1"> </div>
-                                        </div>
-
+                                            <a href=""><i class="fas fa-sync-alt" style="margin-left:25px;font-size:25px; "></i></a>
+                                    </td>
+                                    <td class="invert">
+                                            <a href=""><i class="fas fa-trash-alt" style="color:red; font-size:25px;"></i></a>
                                     </td>
                                 </tr>
                             }
@@ -100,12 +102,14 @@
 
 
                         <tr>
-                            <td style=" border-right: none"></td>
-                            <td style="border-left: none; border-right: none"></td>
-                            <td style="border-left: none; border-right: none"></td>
-                            <td style="border-left: none; border-right: none">Total: </td>
-                            <td style="border-left: none; border-right: none">$986.00</td>
-                            <td style="border-left: none"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><strong style="color:orange; font-size:30px;">Tổng tiền:</strong> </td>
+                            <td class="totals" id="subtotal"></td>
+                            <td></td>
+                            <td></td>
                         </tr>
 
                     </tbody>
@@ -126,3 +130,8 @@
 
     </div>
 </section>
+<script>
+        
+
+
+</script>
