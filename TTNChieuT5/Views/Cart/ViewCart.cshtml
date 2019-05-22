@@ -1,0 +1,137 @@
+﻿@using TTNChieuT5.Models
+@model List<CartItem>
+
+@{
+    ViewBag.Title = "ViewCart";
+    Layout = "~/Views/Shared/_ShopLayout.cshtml";
+    int index = 1;
+}
+
+<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+</script>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="css/style6.css" rel='stylesheet' type='text/css' />
+<link rel="stylesheet" href="css/shop.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/checkout.css">
+<link href="css/easy-responsive-tabs.css" rel='stylesheet' type='text/css' />
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<link href="css/fontawesome-all.css" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800"
+      rel="stylesheet">
+
+<div class="banner_inner">
+    <div class="services-breadcrumb">
+        <div class="inner_breadcrumb">
+
+            <ul class="short">
+                <li>
+                    <a href="index.html">Home</a>
+                    <i>|</i>
+                </li>
+                <li>Giỏ hàng </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<section class="banner-bottom-wthreelayouts py-lg-5 py-3">
+    <div class="container">
+        <div class="inner-sec-shop px-lg-4 px-3">
+            <h3 class="tittle-w3layouts my-lg-4 mt-3">Giỏ hàng </h3>
+            <div class="checkout-right">
+                <h4>
+                    Giỏ hàng của bạn:
+                    <span>@Model.Count().ToString() sản phẩm</span>
+                </h4>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">STT</th>
+                            <th scope="col">Ảnh</th>
+                            <th scope="col">Tên sản phẩm</th>
+                            <th scope="col">Số lượng</th>
+                            <th scope="col">Giá</th>
+                            <th scope="col">Thành tiền</th>
+                            <th scope="col">Cập nhật</th>
+                            <th scope="col">Xóa</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{
+                            foreach (var item in Model)
+                            {
+                                <tr>
+                                    <th scope="row">@index</th>
+                                    <td class="invert-image">
+                                        <a href="#">
+                                            <img src="@Url.Content("/Images/"+item.HinhAnh)" alt=" " class="img-responsive" style="width:100px;">
+                                        </a>
+                                    </td>
+                                    <td class="invert">@item.TenSanPham</td>
+                                    <td class="invert">
+                                        <div class="quantity">
+                                            <div class="quantity-select">
+                                                <div class="entry value-minus">&nbsp;</div>
+                                                <div class="entry value">
+                                                    <input type="number" min="1" max="" value="@item.SoLuong" name="_SoLuong" style="width:50px;"/>
+                                                </div>
+                                                <div class="entry value-plus active">&nbsp;</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    
+
+                                    <td class="invert price">@item.DonGia vnđ</td>
+                                    <td class="invert">@item.ThanhTien vnđ</td>
+                                    <td class="invert">
+                                            <a href=""><i class="fas fa-sync-alt" style="margin-left:25px;font-size:25px; "></i></a>
+                                    </td>
+                                    <td class="invert">
+                                            <a href=""><i class="fas fa-trash-alt" style="color:red; font-size:25px;"></i></a>
+                                    </td>
+                                </tr>
+                            }
+                        }
+
+
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><strong style="color:orange; font-size:30px;">Tổng tiền:</strong> </td>
+                            <td class="totals" id="subtotal"></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="checkout-left row" style="margin-top: 35px">
+                <div class="col-md-12 address_form">
+                    <div class="checkout-right-basket" style="margin-top: 0px;  margin-right: -15px;">
+                        <a href="payment.html" style="padding: 20px 60px">Đặt hàng</a>
+                    </div>
+                </div>
+
+                <div class="clearfix"> </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<script>
+        
+
+
+</script>

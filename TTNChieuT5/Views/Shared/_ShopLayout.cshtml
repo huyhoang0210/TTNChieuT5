@@ -65,31 +65,33 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                 <div class="col-md-3 top-info-cart text-right mt-lg-4" style="display:inline">
                     <ul class="cart-inner-info">
-                        <li class="button-log" >
+                        <li class="button-log" style="margin-bottom:15px;" >
                             @{
                                 if (Session["DangNhap"] != null)
                                 {
                                     <a class="btn-open" href="@Url.Action("DangXuat", "DangNhap")">
-                                        Đăng Xuất
+                                        Đăng Xuất <i class="fas fa-sign-out-alt"></i>
                                     </a>
                                 }
                                 else
                                 {
                                     <a class="btn-open" href="@Url.Action("DangNhap", "DangNhap")">
-                                        Đăng Nhập
+                                        Đăng Nhập <i class="fas fa-unlock"></i>
                                     </a>
                                 }
                             }
                         </li>
                         <li class="galssescart galssescart2 cart cart box_1">
-                            <form action="#" method="post" class="last">
-                                <input type="hidden" name="cmd" value="_cart">
-                                <input type="hidden" name="display" value="1">
-                                <button class="top_googles_cart" type="submit" name="submit" value="">
+                            
+                                @*<input type="hidden" name="cmd" value="_cart">
+                                <input type="hidden" name="display" value="1">*@
+                                @*<button class="top_googles_cart" type="submit" name="submit" value="">*@
+                                <a href="@Url.Action("ViewCart","Cart")" class="link_cart" >
                                     Giỏ hàng
-                                    <i class="fas fa-cart-arrow-down"></i>
-                                </button>
-                            </form>
+                                    <i class="fas fa-cart-arrow-down" style="margin-right:5px;"></i>
+                                </a>
+                                @*</button>*@
+                   
                         </li>
                     </ul>
                     <!---->

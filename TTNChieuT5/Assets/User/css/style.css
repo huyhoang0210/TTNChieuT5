@@ -2406,4 +2406,22 @@ a.carousel-control-prev, a.carousel-control-next {
 ul.cart-inner-info {
     margin-top: 15px;
 }
+
+
+.checkout-right-basket a {
+    float: right;
+    /* border: 1px solid #ffe636; */
+    background-color: #151515;
+    color: #fff;
+    font-size: 17px;
+    margin-right: 15px;
+}
+
+.checkout-right-basket a:hover {
+        background-color: #ff4e00;
+
+    }
+a.link_cart {
+    color: #000;
+}
 /*-- //responsive media queries --*/

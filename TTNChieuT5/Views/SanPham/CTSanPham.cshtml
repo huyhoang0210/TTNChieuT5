@@ -70,16 +70,24 @@
                     </ul>
                 </div>
                 <div class="color-quality">
-                    <div class="color-quality-right">
-                        <h5>Số lượng :</h5>
-                        <input type="number" name="" min="0" max="" style="width: 50px" value="1">
 
+                    <div class="color-quality-right">
+                        <form action="/Cart/AddToCart2/" method="post">
+                            <h5>Số lượng</h5>
+                            <input type="number" name="_SoLuong" min="0" max="" style="width: 50px" value="1">
+                            <input type="hidden" name="_IdSanPham" value="@Model.IDSanPham">
+                            <input type="hidden" name="_url" value="@Request.Url.ToString()">
+   
+                            <button type="submit" class="googles-cart pgoogles-cart">
+                                Thêm vào giỏ hàng
+                            </button>
+                        </form>
                     </div>
                 </div>
 
                 <div class="occasion-cart">
                     <div class="googles single-item singlepage">
-                        <form action="#" method="post">
+                        @*<form action="#" method="post">
                             <input type="hidden" name="cmd" value="_cart">
                             <input type="hidden" name="add" value="1">
                             <input type="hidden" name="googles_item" value="Farenheit">
@@ -88,8 +96,7 @@
                                 Thêm vào giỏ hàng
                             </button>
 
-                        </form>
-
+                        </form>*@
                     </div>
                 </div>
                 <ul class="footer-social text-left mt-lg-4 mt-3">
